@@ -35,9 +35,9 @@ import requests
 from eth_abi import decode, encode
 from eth_utils import keccak, to_checksum_address, to_hex
 
-API_KEY = "GUFYAMHAXEXJZWMYNJYY8R6DXU5ASWVG9T"
+API_KEY = os.getenv("ETHERSCAN_API_KEY")
 ETHERSCAN = "https://api.etherscan.io/v2/api"
-RPC_URL = "https://eth-mainnet.g.alchemy.com/v2/GAX_-5YBHqnLeCM7dL0MR"
+RPC_URL = os.getenv("ETH_RPC_URL")
 CHAIN_ID = 1
 CD = 0.22                      # Etherscan request interval (free tier: 5 req/s)
 
